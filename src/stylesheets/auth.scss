@@ -1,0 +1,89 @@
+$default-background-color: #335C3C;
+$auth-partial-color: #BEEB6E;
+$auth-signin-color: #00320A;
+$helper-color: #B5E26B;
+
+$hr-color: #718E7A;
+
+
+@mixin pad-left {
+  padding: 0 3px;
+}
+
+.auth-page {
+  margin: -1rem;
+  background-color: $default-background-color;
+
+  .auth-background {
+    background-image: url('../assets/images/login-frame.svg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .recurate-svg {
+      width: clamp(0px, 100%, 100%);
+    }
+
+    .auth-partial {
+      background-color: $auth-partial-color;
+      padding: 1rem 1rem 2.2rem 1rem;
+      border-radius: 0.5rem;
+      width: clamp(320px, 100%, 438px);
+
+      .auth-login-form {
+        width: 285px;
+        margin: auto;
+        text-align: left;
+
+        h5 {
+          color: $auth-signin-color;
+          font-size: 24px;
+          font-weight: 600;
+          @include pad-left();
+        }
+        
+        p {
+          color: $default-background-color;
+          @include pad-left();
+        }
+
+        .link {
+          color: $default-background-color;
+          font-weight: 600;
+          text-decoration: none;
+          @include pad-left();
+
+          &:hover {
+            color: #234b2b;
+          }
+        }
+      }
+    }
+    hr {
+      color: $hr-color;
+      margin: 10px 0 1px 0;
+      height: 2px;
+    }
+
+    .auth-login-helper {
+      margin-top: 12px;
+      
+      p {
+        color: white;
+      }
+
+      a {
+        color: $helper-color;
+        border-radius: 2px;
+        padding: 5px 12px;
+        border: 1px solid $helper-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
