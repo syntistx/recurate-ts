@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
+
+$default-font-color: #52575C;
+$default-back-color: #F8FAF6;
+
+.App {
+  background-color: $default-back-color;
+  color: $default-font-color;
+  width: clamp(320px, 100%, 100%);
+  min-height: 100vh;
+
+}
